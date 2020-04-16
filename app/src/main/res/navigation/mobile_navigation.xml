@@ -40,4 +40,9 @@
         android:name="com.android.coolchat.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_quit"
+        android:name="com.android.coolchat.ui.quit.QuitFragment"
+        android:label="@string/menu_quit"
+        tools:layout="@layout/quit_fragment" />
 </navigation>
