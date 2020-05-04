@@ -18,5 +18,139 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/activity_wechat_chat_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:layout_gravity="start"
+            android:padding="@dimen/margin_img"
+            app:srcCompat="@drawable/back"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="16dp"
+            android:focusable="true" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/toolbar_divider"
+            tools:ignore="RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/activity_coolchat_chat_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_img"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/content_text_normal"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="18dp"
+            tools:text="@string/NA"
+            android:layout_marginStart="@dimen/margin_img" />
+
+        <ImageView
+            android:id="@+id/activity_coolchat_chat_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:padding="@dimen/item_margin_left"
+            app:srcCompat="@drawable/profile_info"
+            tools:layout_editor_absoluteX="126dp"
+            tools:layout_editor_absoluteY="28dp"
+            android:focusable="true"
+            tools:ignore="RtlHardcoded" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_coolchat_chat_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/activity_coolchat_chat_layout_bottom"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_coolchat_toolbar" />
+
+    <LinearLayout
+        android:id="@+id/activity_coolchat_chat_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/input_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_coolchat_chat_rv">
+
+        <ImageView
+            android:id="@+id/activity_coolchat_chat_iv_voice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/margin"
+            android:paddingBottom="@dimen/margin"
+            app:srcCompat="@drawable/icon_voice"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <EditText
+            android:id="@+id/activity_coolchat_chat_et_msg"
+            android:layout_width="0dp"
+            android:layout_height="38dp"
+            android:layout_weight="5"
+            android:background="@drawable/et_underline_style"
+            android:textCursorDrawable="@null"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/activity_coolchat_chat_iv_emoji"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:paddingTop="@dimen/margin"
+            android:paddingBottom="@dimen/margin"
+            app:srcCompat="@drawable/icon_emoji"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp"
+            android:focusable="true" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/activity_coolchat_chat_btn_send"
+                android:layout_width="42dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@drawable/send_btn_bg"
+                android:text="@string/send"
+                android:textColor="@color/colorWhite" />
+
+            <ImageView
+                android:id="@+id/activity_coolchat_chat_iv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/margin"
+                android:src="@drawable/icon_add" />
+        </FrameLayout>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
