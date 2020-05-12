@@ -10,7 +10,7 @@
         android:id="@+id/activity_coolchat_toolbar"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:background="?attr/colorPrimary"
+        android:background="@color/colorDarkGrey"
         android:fitsSystemWindows="true"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -24,14 +24,14 @@
             android:id="@+id/activity_wechat_chat_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="start"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
-            android:layout_gravity="start"
+            android:focusable="true"
             android:padding="@dimen/margin_img"
             app:srcCompat="@drawable/back"
             tools:layout_editor_absoluteX="5dp"
-            tools:layout_editor_absoluteY="16dp"
-            android:focusable="true" />
+            tools:layout_editor_absoluteY="16dp" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -45,13 +45,11 @@
             android:id="@+id/activity_coolchat_chat_tv_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/margin_img"
-            android:textColor="@color/colorWhite"
+            android:textColor="@android:color/black"
             android:textSize="@dimen/content_text_normal"
             tools:layout_editor_absoluteX="55dp"
             tools:layout_editor_absoluteY="18dp"
-            tools:text="@string/NA"
-            android:layout_marginStart="@dimen/margin_img" />
+            tools:text="@string/NA" />
 
         <ImageView
             android:id="@+id/activity_coolchat_chat_profile"
@@ -60,18 +58,19 @@
             android:layout_gravity="right"
             android:background="?attr/selectableItemBackground"
             android:clickable="true"
+            android:focusable="true"
             android:padding="@dimen/item_margin_left"
             app:srcCompat="@drawable/profile_info"
+            tools:ignore="RtlHardcoded"
             tools:layout_editor_absoluteX="126dp"
-            tools:layout_editor_absoluteY="28dp"
-            android:focusable="true"
-            tools:ignore="RtlHardcoded" />
+            tools:layout_editor_absoluteY="28dp" />
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/activity_coolchat_chat_rv"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:background="@color/colorLightGrey"
         app:layout_constraintBottom_toTopOf="@id/activity_coolchat_chat_layout_bottom"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
